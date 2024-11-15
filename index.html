@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Application Resizer pour un espace Z au sein d'une Webapp">
+    <title>Astronaute App Resizer</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="astronaute, space, template, css">
+    <meta name="author" content="Alexandre GRAZIANI">
+    <link rel="stylesheet" href="./assets/css/root.css">
+    <script src="https://kit.fontawesome.com/b83fa86058.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- La div Perspective est la section principale qui permet de donner une perspective à la page lors de l'accès au menu -->
+    <div class="perspective effect-rotate-left">
+
+        <!-- CONTAINER ??? -->
+        <div class="container">
+
+            <!-- OUTER-NAV-RETURN comprendra l'entièrté du .CONTAINER en tant que hyperlien <a>-->
+            <div class="outer-nav-return"></div>
+
+            <!-- L-VIEWPORT ??? détermine la perspective et le outline du L-WRAPPER -->
+            <div class="l-viewport" id="viewport">
+
+                <!-- L-WRAPPER ??? détermine le conteneur qui englobe le header, la navigation de gauche et la section de tous les contenus-->
+                <div class="l-wrapper">
+
+                    <!-- Header Barre de Navigation au Top de l'écran -->
+                    <header class="header">
+                        <a class="header-logo" href="">
+                            <img src="./assets/img/logo.png" alt="Astronaute App Logo">
+                            <p>Astronaute App</p>
+                        </a>
+                        <button class="header-CTA">Hire Us</button>
+                        <div class="header-toggle">
+                            <span></span>
+                        </div>
+                    </header>
+
+                    <!-- Barre de Navigation à gauche de l'écran -->
+                    <nav class="l-side-nav">
+                        <ul class="side-nav">
+                            <li class="is-active">Home</li>
+                            <li>About Us</li>
+                            <li>Works</li>
+                            <li>Services</li>
+                            <li>Contact</li>
+                        </ul>
+                    </nav>
+
+                    <!-- Contenus par sections relatives à la barre de navigation à gauche de l'écran -->
+                    <ul class="l-main-content main-content">
+                        <li class="l-section section section-is-active" id="home">
+                            <div class="home-col">
+                                <div class="home-row">
+                                    <div class="title">
+                                        <h1>Your Next Interactive Experience</h1>
+                                        <a href="">
+                                            Hire Us
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                    <img src="./assets/img/introduction-visual.png" alt="">
+                                </div>
+                                <div class="home-banner-row">
+                                    <div class="banner-col">
+                                        <h2>Metiew & Smith</h2>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit ab ullam ratione!</p>
+                                    </div>
+                                    <div class="banner-col">
+                                        <h2>Metiew & Smith</h2>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit ab ullam ratione!</p>
+                                    </div>
+                                    <div class="banner-col">
+                                        <h2>Metiew & Smith</h2>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit ab ullam ratione!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="l-section section" id="aboutus">
+                            <div class="about-col">
+                                <div class="about-row">
+                                    <div class="title">
+                                        <h2>We Believe in passionate people</h2>
+                                        <a href="">
+                                            Career
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                    <img src="./assets/img/about-visual.png" alt="">
+                                </div>
+                                <div class="about-banner-row">
+                                    <div class="banner-col">
+                                        <img src="./assets/img/about-winners.jpg" alt="">
+                                        <h3>Winner</h3>
+                                    </div>
+                                    <div class="banner-col">
+                                        <img src="./assets/img/about-philosophy.jpg" alt="">
+                                        <h3>Philosophie</h3>
+                                    </div>
+                                    <div class="banner-col">
+                                        <img src="./assets/img/about-history.jpg" alt="">
+                                        <h3>Histoire</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="l-section section" id="works">
+                            <div class="works-col">
+                                <div class="works-row">
+                                    <div class="title">
+                                        <h2>Works Selected</h2>
+                                        <a href="">
+                                            Hire Us
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="l-section section" id="services">
+                            <div class="services-col">
+                                <div class="services-banner-col">
+                                    <div class="banner-col">
+                                        <p>Pawia 5, 31 - 154 Krakow, Poland</p>
+                                        <p>ouremail@gmail.com</p>
+                                        <p>+48 44 99 99 00</p>
+                                        <a href="">Behance</a>
+                                        <a href="">Dribble</a>
+                                        <a href="">Contact Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="l-section section" id="contact">
+                            <div class="contact-col">
+                                <div class="contact-row">
+                                    <div class="title">
+                                        <h2>Contact</h2>
+                                        <a href="">
+                                            Hire Us
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <form action="">
+                                    <div class="input-group">
+                                        <input type="text" placeholder="Prénom" required>
+                                        <input type="text" placeholder="Nom" required>
+                                    </div>
+                                    <input type="email" placeholder="Email" required>
+                                    <input type="submit" value="Envoyer">
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Barre de navigation invisible (par rapport à la perspective de la section principale) et visible dans le cas du clique sur le bouton Toggle du Header -->
+        <!-- Outer-Nav doit être à droite de toute la page mise en perspective -->
+        <ul class="outer-nav">
+            <li class="is-active">Home</li>
+            <li>About Us</li>
+            <li>Works</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+<script src="./assets/js/script.js"></script>
+</body>
+
+</html>
