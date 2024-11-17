@@ -269,7 +269,7 @@ body {
 }
 
 /* SECTION HOME */
-.l-section .home-col{
+.l-section .home-col {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -419,9 +419,11 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
 }
-.l-section .about-col .about-row img{
+
+.l-section .about-col .about-row img {
     width: 35%;
 }
+
 .l-section .about-col .about-banner-row {
     display: flex;
     flex-direction: row;
@@ -433,20 +435,22 @@ body {
     /* padding: 1rem 2rem; */
 }
 
-.l-section .about-col .about-banner-row .banner-col{
+.l-section .about-col .about-banner-row .banner-col {
     color: white;
     position: relative;
     width: 100%;
     height: 100px;
     border: .5rem solid #0f33ff;
 }
-.l-section .about-col .about-banner-row .banner-col img{
+
+.l-section .about-col .about-banner-row .banner-col img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
-.l-section .about-col .about-banner-row .banner-col h3{
+
+.l-section .about-col .about-banner-row .banner-col h3 {
     position: absolute;
     bottom: -1.3rem;
     left: 1rem;
@@ -457,30 +461,108 @@ body {
     text-transform: uppercase;
     transition: all .3s ease-in-out;
 }
-.l-section .about-col .about-banner-row .banner-col:hover h3{
+
+.l-section .about-col .about-banner-row .banner-col:hover h3 {
     bottom: -2rem;
 }
 
 /* WORKS */
-.l-section .works-col{
+.l-section .works-col {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 75%;
+    /* width: 900px; */
+    margin: 0 auto;
 }
-.l-section .works-col .works-row .title{
+
+.l-section .works-col .works-row .title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem 0rem;
 }
-.l-section .works-col .works-row .title h2{
+
+.l-section .works-col .works-row .title h2 {
     font-size: 3rem;
 }
 
+.l-section .works-col .works-carousel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* transform-style: preserve-3d; */
+    width: 100%;
+    height: 45vh;
+    margin-top: 5rem;
+}
+
+.l-section .works-col .works-carousel input[type=radio] {
+    display: none;
+}
+
+.l-section .works-col .works-carousel .cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2rem;
+}
+
+.l-section .works-col .works-carousel .cards .card {
+    position: absolute;
+    width: 45%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: transform .4s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 0px 12px 0px rgba(166, 89, 255, 0.829);
+    border-radius: 20rem 30rem;
+}
+
+.l-section .works-col .works-carousel .cards .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20rem 30rem;
+}
+
+#item-1:checked~.cards #song-3,
+#item-2:checked~.cards #song-1,
+#item-3:checked~.cards #song-2 {
+    transform: translatex(-70%) scale(.7);
+    opacity: .4;
+    z-index: 0;
+}
+
+#item-1:checked~.cards #song-2,
+#item-2:checked~.cards #song-3,
+#item-3:checked~.cards #song-1 {
+    transform: translatex(70%) scale(.7);
+    opacity: .4;
+    z-index: 0;
+}
+
+#item-1:checked~.cards #song-1,
+#item-2:checked~.cards #song-2,
+#item-3:checked~.cards #song-3 {
+    transform: translatex(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+
+    img {
+        box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+    }
+}
+
 /* SERVICES */
-.l-section .services-col{
+.l-section .services-col {
     width: 100%;
     height: 100%;
     background: url('../img/contact-visual.png');
@@ -489,7 +571,7 @@ body {
     background-repeat: no-repeat;
 }
 
-.l-section .services-col .services-banner-col{
+.l-section .services-col .services-banner-col {
     position: absolute;
     bottom: 25%;
     right: 10%;
@@ -497,26 +579,29 @@ body {
     box-shadow: 0px 0px 30px #1b1b1b;
     padding: 2rem 1rem;
 }
-.l-section .services-col .services-banner-col .banner-col{
+
+.l-section .services-col .services-banner-col .banner-col {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
 }
+
 .l-section .services-col .services-banner-col .banner-col p,
-.l-section .services-col .services-banner-col .banner-col a{
+.l-section .services-col .services-banner-col .banner-col a {
     text-decoration: none;
     font-weight: 800;
     color: white;
 }
-.l-section .services-col .services-banner-col .banner-col a{
+
+.l-section .services-col .services-banner-col .banner-col a {
     padding: .5rem 1rem;
     background-color: #0f33ff;
 }
 
 /* CONTACT US */
-.l-section .contact-col{
+.l-section .contact-col {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -524,22 +609,25 @@ body {
     gap: 2rem;
     margin: 10rem;
 }
-.l-section .contact-col .contact-row .title{
+
+.l-section .contact-col .contact-row .title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem 0rem;
 }
-.l-section .contact-col form{
+
+.l-section .contact-col form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
 }
+
 .l-section .contact-col form input[type=text],
-.l-section .contact-col form input[type=email]{
+.l-section .contact-col form input[type=email] {
     outline: none;
     border: none;
     border-bottom: 2px solid white;
@@ -547,14 +635,17 @@ body {
     color: white;
     font-size: 2rem;
 }
+
 .l-section .contact-col form input[type=text]::placeholder,
-.l-section .contact-col form input[type=email]::placeholder{
+.l-section .contact-col form input[type=email]::placeholder {
     color: white;
 }
-.l-section .contact-col form input[type=email]{
+
+.l-section .contact-col form input[type=email] {
     width: 100%;
 }
-.l-section .contact-col form input[type=submit]{
+
+.l-section .contact-col form input[type=submit] {
     outline: none;
     border: none;
     background-color: #0f33ff;
@@ -588,6 +679,7 @@ body {
     font-size: 3rem;
     font-weight: 900;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .outer-nav.is-visual li.is-active {

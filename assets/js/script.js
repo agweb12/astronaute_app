@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         outerNav.classList.add('is-visual');
         outerNavItems.classList.add('is-active');
     }
-    
+
     function retourNavigationNormal() {
         if (outerNavReturn.classList.contains('is-visual')) {
             perspective.classList.remove('perspective--modalview', 'effect-rotate-left-animate');
@@ -52,6 +52,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+
+
+    headerToggle.addEventListener('click', nouvelleNavigation);
+
+    outerNavReturn.addEventListener('click', retourNavigationNormal);
+
+    window.addEventListener('wheel', navigationEntreSection);
+
     navItems.forEach((item, indexSection) => {
         // Appelle de la fonction navigation pour exécuter la transition entre les sections
         item.addEventListener('click', function () {
@@ -62,23 +70,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 navItems.forEach(nav => nav.classList.remove('is-active'));
                 // Ajouter la classe 'is-active' à l'élément li cliqué
                 item.classList.add('is-active');
-    
+
                 // Retirer la classe 'section-is-active' de toutes les sections
                 sections.forEach(section => section.classList.remove('section-is-active'));
                 // Ajouter la classe 'section-is-active' à la section correspondante
                 sections[indexSection].classList.add('section-is-active');
                 currentSectionIndex = indexSection; // Mettre à jour l'index de la section actuelle
-    
+
                 setTimeout(() => {
                     isTransitioning = false; // Fin de la transition après 500 ms
                 }, 500);
             }
         });
     });
-
-    headerToggle.addEventListener('click', nouvelleNavigation);
-
-    outerNavReturn.addEventListener('click', retourNavigationNormal);
-
-    window.addEventListener('wheel', navigationEntreSection);
 });
